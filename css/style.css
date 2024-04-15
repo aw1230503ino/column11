@@ -1,0 +1,173 @@
+@charset "utf-8";
+@import url("common.css");
+
+
+html {
+  font-size: 100%;
+}
+body {
+  color: #24292e;
+  padding: 0 4%;
+  font-family: serif;
+
+}
+section,header{
+  width: 960px;
+  margin: 0 auto;
+}
+h2{
+  text-align: center;
+}
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+.nav_al{
+display: flex;
+justify-content: space-around;
+
+}
+nav ul{
+  list-style-type: none;
+  display: flex;
+}
+nav img{
+  width: 20px;
+}
+li a{
+  text-decoration: none;
+  margin: 25px;
+  color: black;
+}
+#logo img{
+  width: 70px;
+}
+header{
+  padding: 60px 4%;  
+}
+
+/*-------------------------------------------
+Mainvisual
+-------------------------------------------*/
+#mainvisual img{
+  height: 420px;
+  width: 100%;
+
+}
+/*-------------------------------------------
+About
+-------------------------------------------*/
+
+
+/*-------------------------------------------
+Works
+-------------------------------------------*/
+.work_img{
+  display: flex;
+}
+.work_img img{
+  width: 90%;
+}
+
+/*-------------------------------------------
+News
+-------------------------------------------*/
+.news_al:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+.news_al {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 auto;    
+  border-bottom: dashed 1px #333;
+}
+.news_head {
+  margin-bottom: 0;
+  padding-top: 8px;
+  font-weight: bold;
+}
+.news_body {
+  width: 70%;
+  max-width: 800px;
+  line-height: 2;
+  text-align: left;
+}
+
+
+/*-------------------------------------------
+Contact
+-------------------------------------------*/
+label input{
+  width: 90%;
+}
+textarea{
+  width: 90%;
+
+}
+#content span{
+  width: 100px;
+}
+h2 label input{
+  background-color: #24292e;
+  color: #fff;
+  width: 150px;
+  height: 40px;
+}
+/*-------------------------------------------
+フッター
+-------------------------------------------*/
+footer {
+  width: 960px;
+  margin: 0 auto;
+  background-color: #24292e;
+  color: #fff;
+  font-size: 0.5rem;
+  padding: 10px 20px;
+  text-align: center;
+}
+/* パソコンで見たときは"pc"のclassがついた画像が表示される */
+.pc { display: block !important; }
+.sp { display: none !important; }
+ 
+/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+@media only screen and (max-width: 600px) {
+    .pc { display: none !important; }
+    .sp { display: block !important; }
+}
+
+@media screen and (max-width:600px){
+  #mainvisual img{
+    height: 100%;
+    width: 100%;
+  }  
+  .nav_al{
+    display: block;
+  }
+  #logo{
+    text-align: center;
+  }
+
+  .work_img{
+    display: block;
+  }
+  .work_img{
+    text-align: center;
+  }
+  .news_body{
+    word-break: break-word;
+  }
+  section,header{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .news_al {
+    display: block;
+  }
+  label input{
+    width: 100%;
+  }  
+  
+  footer {
+  width: 100%;
+  }
+}
